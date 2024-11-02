@@ -27,5 +27,5 @@ class Game(models.Model):
         return f"{self.first_player.name} {self.first_player_goals or '_'} - {self.second_player_goals or '_'} {self.second_player.name}"
 
     def finished(self):
-        return self.first_player_goals && self.second_player_goals
+        return self.first_player_goals and self.second_player_goals
     
