@@ -28,4 +28,4 @@ class Game(models.Model):
 
     def finished(self):
         return self.first_player_goals and self.second_player_goals
-    
+
