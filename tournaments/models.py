@@ -13,7 +13,7 @@ class Tournament(models.Model):
     players = models.ManyToManyField(Player)
 
     def __str__(self):
-        return self.name
+        return self.name #test
 
     
 class Game(models.Model):
