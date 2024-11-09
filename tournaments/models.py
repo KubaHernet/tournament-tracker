@@ -10,7 +10,6 @@ class Player(models.Model):
 
 class Tournament(models.Model):
     name = models.CharField(max_length=200)
-    players = models.ManyToManyField(Player)
 
     def __str__(self):
         return self.name #test3
