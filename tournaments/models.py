@@ -24,8 +24,8 @@ class Game(models.Model):
     tournament = models.ForeignKey(Tournament, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.first_player.name} {self.first_player_goals or '_'} - {self.second_player_goals or '_'} {self.second_player.name}"
+        return f"{self.first_player.name} {self.first_player_goals or '_'}:{self.second_player_goals or '_'} {self.second_player.name}"
 
-    def finished(self):
-        return self.first_player_goals and self.second_player_goals
+    def is_finished(self):
+        return self.first_player_goals is not None and self.second_player_goals is not None
 
